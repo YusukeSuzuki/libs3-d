@@ -1,0 +1,9 @@
+{
+    "name": "s3",
+    "description": "Deimos bindings for libs3, a complete C library API for Amazon S3",
+    "homepage": "https://s3.amazonaws.com/libs3.ischo.com/index.html ",
+    "importPaths": ["."],
+    "targetType": "sourceLibrary",
+    "license": "GPL",
+    "libs" : ["s3"]
+}
