@@ -1155,7 +1155,7 @@ void S3_deinitialize();
  * @param status is S3Status code for which the textual name will be returned
  * @return a string with the textual name of an S3Status code
  **/
-const char *S3_get_status_name(S3Status status);
+const(char) *S3_get_status_name(S3Status status);
 
 
 /**
