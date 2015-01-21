@@ -851,7 +851,7 @@ struct S3ErrorDetails
  *         Typically, this will return either S3StatusOK or
  *         S3StatusAbortedByCallback.
  **/
-alias S3ResponsePropertiesCallback = const S3Status function
+alias S3ResponsePropertiesCallback = S3Status function
     (const S3ResponseProperties *properties, void *callbackData);
 
 
