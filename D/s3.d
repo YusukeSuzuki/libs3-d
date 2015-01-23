@@ -752,6 +752,21 @@ struct S3PutProperties
      * prefix (i.e., should be of the form 'foo', NOT 'x-amz-meta-foo').
      **/
     const S3NameValue *metaData;
+
+    /**
+     * This a boolean value indicating whether or not the object should be
+     * stored by Amazon S3 using server-side encryption, wherein the data is
+     * encrypted by Amazon before being stored on permanent medium.
+     * Server-side encryption does not affect the data as it is sent to or
+     * received by Amazon, the encryption is applied by Amazon when objects
+     * are put and then de-encryption is applied when the objects are read by
+     * clients.
+     * If this value is 0, then server-side encryption is not used; if this
+     * value is non-zero, then server-side encryption is used.  Note that the
+     * encryption status of the object can be checked by ensuring that the put
+     * response has the usesServerSideEncryption flag set.
+     **/
+    char useServerSideEncryption;
 };
 
 
