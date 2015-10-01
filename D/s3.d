@@ -572,7 +572,7 @@ struct S3AclGrant
              * This is the email address of the Amazon Customer being granted
              * permissions by this S3AclGrant.
              **/
-            char emailAddress[S3_MAX_GRANTEE_EMAIL_ADDRESS_SIZE];
+            char[S3_MAX_GRANTEE_EMAIL_ADDRESS_SIZE] emailAddress;
         };
         AmazonCustomerByEmail amazonCustomerByEmail;
         /**
@@ -584,11 +584,11 @@ struct S3AclGrant
             /**
              * This is the CanonicalUser ID of the grantee
              **/
-            char id[S3_MAX_GRANTEE_USER_ID_SIZE];
+            char[S3_MAX_GRANTEE_USER_ID_SIZE] id;
             /**
              * This is the display name of the grantee
              **/
-            char displayName[S3_MAX_GRANTEE_DISPLAY_NAME_SIZE];
+            char[S3_MAX_GRANTEE_DISPLAY_NAME_SIZE] displayName;
         };
         
         CanonicalUser canonicalUser;
